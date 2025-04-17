@@ -1,0 +1,72 @@
+<html><body><pre>
+# This <span style="color:pink">is</span> a single<span style="color:pink">-</span>line comment
+
+"""This <span style="color:pink">is</span> a multi<span style="color:pink">-</span>line comment (docstring)
+Demonstrating all lexical categories <span style="color:pink">in</span> Python.
+"""
+
+import math
+from random import randint
+
+
+# Keywords <span style="color:pink">and</span> identifiers
+def function_name(param1, param2<span style="color:pink">=</span>123):
+    my_variable = "hello"
+    _privateVar = f"formatted {param1}"
+    another_var = 45.67
+    complex_num = 5j
+    flag = True
+    nothing = None
+    if my_variable <span style="color:pink">and</span> another_var > 10:
+        result = param1 + param2
+        print("Result:", result)
+    elif param2 < 100:
+        while param2 != 0:
+            param2 -= 1
+            continue
+    else:
+        pass
+
+    try:
+        raise ValueError("Just a test")
+    except Exception as e:
+        print(e)
+    finally:
+        return result
+
+
+class ClassName:
+    def __init__(self, value):
+        self.value = value
+
+    def compute(self):
+        for i <span style="color:pink">in</span> range(5):
+            self.value **= 2
+            if self.value <span style="color:pink">in</span> [1, 4, 16]:
+                break
+            elif self.value <span style="color:pink">not</span> <span style="color:pink">in</span> (0, 2, 3):
+                self.value //= 2
+
+    def __str__(self):
+        return f"Value <span style="color:pink">is</span> {self.value}"
+
+
+def logic_operations(a, b):
+    x = a <span style="color:pink">and</span> b <span style="color:pink">or</span> <span style="color:pink">not</span> a
+    y = a == b
+    z = a <span style="color:pink">is</span> b
+    w = a <span style="color:pink">is</span> <span style="color:pink">not</span> b
+    m = a & b
+    n = a | b
+    o = ~a
+    p = a ^ b
+    q = a << 2
+    r = b >> 1
+    s = 1 <= a <= 100
+    t = a >= b
+    return x, y, z, w, m, n, o, p, q, r, s, t
+
+
+# Punctuation test
+print("Done.", end=", see you soon:")
+</pre></body></html>
