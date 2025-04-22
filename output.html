@@ -1,70 +1,70 @@
 <html><body><pre>
-# This <span style="color:pink">is</span> a single<span style="color:pink">-</span>line comment
+# This is <span style="color:red">a</span> single-line comment
 
-"""This <span style="color:pink">is</span> a multi<span style="color:pink">-</span>line comment (docstring)
-Demonstrating all lexical categories <span style="color:pink">in</span> Python.
+"""This is <span style="color:red">a</span> multi-line comment (docstring)
+Demonstrating all lexical categories in Python.
 """
 
 import math
 from random import randint
 
 
-# Keywords <span style="color:pink">and</span> identifiers
-def function_name(param1, param2<span style="color:pink">=</span>123):
-    my_variable = "hello"
-    _privateVar = f"formatted {param1}"
-    another_var = 45.67
-    complex_num = 5j
-    flag = True
-    nothing = None
-    if my_variable <span style="color:pink">and</span> another_var > 10:
-        result = param1 + param2
-        print("Result:", result)
-    elif param2 < 100:
-        while param2 != 0:
-            param2 -= 1
+# Keywords and identifiers
+def <span style="color:red">function_name</span>(<span style="color:red">param1</span>, <span style="color:red">param2</span>=123):
+    <span style="color:red">my_variable</span> = "hello"
+    <span style="color:red">_privateVar</span> = f"formatted {<span style="color:red">param1</span>}"
+    <span style="color:red">another_var</span> = 45.67
+    <span style="color:red">complex_num</span> = 5j
+    <span style="color:red">flag</span> = True
+    <span style="color:red">nothing</span> = None
+    if <span style="color:red">my_variable</span> and <span style="color:red">another_var</span> > 10:
+        <span style="color:red">result</span> = <span style="color:red">param1</span> + <span style="color:red">param2</span>
+        print("Result:", <span style="color:red">result</span>)
+    elif <span style="color:red">param2</span> < 100:
+        while <span style="color:red">param2</span> != 0:
+            <span style="color:red">param2</span> -= 1
             continue
     else:
         pass
 
     try:
-        raise ValueError("Just a test")
-    except Exception as e:
-        print(e)
+        raise ValueError("Just <span style="color:red">a</span> test")
+    except Exception as <span style="color:red">e</span>:
+        print(<span style="color:red">e</span>)
     finally:
-        return result
+        return <span style="color:red">result</span>
 
 
-class ClassName:
-    def __init__(self, value):
-        self.value = value
+class <span style="color:red">ClassName</span>:
+    def __init__(<span style="color:red">self</span>, <span style="color:red">value</span>):
+        <span style="color:red">self</span>.<span style="color:red">value</span> = <span style="color:red">value</span>
 
-    def compute(self):
-        for i <span style="color:pink">in</span> range(5):
-            self.value **= 2
-            if self.value <span style="color:pink">in</span> [1, 4, 16]:
+    def <span style="color:red">compute</span>(<span style="color:red">self</span>):
+        for <span style="color:red">i</span> in range(5):
+            <span style="color:red">self</span>.<span style="color:red">value</span> **= 2
+            if <span style="color:red">self</span>.<span style="color:red">value</span> in [1, 4, 16]:
                 break
-            elif self.value <span style="color:pink">not</span> <span style="color:pink">in</span> (0, 2, 3):
-                self.value //= 2
+            elif <span style="color:red">self</span>.<span style="color:red">value</span> not in (0, 2, 3):
+                <span style="color:red">self</span>.<span style="color:red">value</span> //= 2
 
-    def __str__(self):
-        return f"Value <span style="color:pink">is</span> {self.value}"
+    def <span style="color:red">__str__</span>(<span style="color:red">self</span>):
+        return f"Value is {<span style="color:red">self</span>.<span style="color:red">value</span>}"
 
 
-def logic_operations(a, b):
-    x = a <span style="color:pink">and</span> b <span style="color:pink">or</span> <span style="color:pink">not</span> a
-    y = a == b
-    z = a <span style="color:pink">is</span> b
-    w = a <span style="color:pink">is</span> <span style="color:pink">not</span> b
-    m = a & b
-    n = a | b
-    o = ~a
-    p = a ^ b
-    q = a << 2
-    r = b >> 1
-    s = 1 <= a <= 100
-    t = a >= b
-    return x, y, z, w, m, n, o, p, q, r, s, t
+def <span style="color:red">logic_operations</span>(<span style="color:red">a</span>, <span style="color:red">b</span>):
+    <span style="color:red">x</span> = <span style="color:red">a</span> and <span style="color:red">b</span> or not <span style="color:red">a</span>
+    <span style="color:red">y</span> = <span style="color:red">a</span> == <span style="color:red">b</span>
+    <span style="color:red">z</span> = <span style="color:red">a</span> is <span style="color:red">b</span>
+    <span style="color:red">w</span> = <span style="color:red">a</span> is not <span style="color:red">b</span>
+    <span style="color:red">m</span> = <span style="color:red">a</span> & <span style="color:red">b</span>
+    <span style="color:red">n</span> = <span style="color:red">a</span> | <span style="color:red">b</span>
+    <span style="color:red">o</span> = ~<span style="color:red">a</span>
+    <span style="color:red">p</span> = <span style="color:red">a</span> ^ <span style="color:red">b</span>
+    <span style="color:red">q</span> = <span style="color:red">a</span> << 2
+    <span style="color:red">r</span> = <span style="color:red">b</span> >> 1
+    <span style="color:red">s</span> = 1 <= <span style="color:red">a</span> <= 100
+    <span style="color:red">t</span> = <span style="color:red">a</span> >= <span style="color:red">b</span>
+    return <span style="color:red">x</span>, <span style="color:red">y</span>, <span style="color:red">z</span>, <span style="color:red">w</span>, <span style="color:red">m</span>, <span style="color:red">n</span>, <span style="color:red">o</span>, <span style="color:red">p</span>, <span style="color:red">q</span>, <span style="color:red">r</span>, <span style="color:red">s</span>, <span style="color:red">t</span>
 
 
 # Punctuation test
