@@ -1,27 +1,58 @@
 #!/bin/bash
-# keywords.sh - Resalta keywords de Python con color #ff9d00 en HTML
+# filepath: e:\university\4-semester\computational-methods\project-2\lexical-highlighter\keywords.sh
 
-# Lista de keywords de Python
+# Python keywords to highlight
 KEYWORDS=(
-    "False" "None" "True" "and" "as" "assert" "async" "await" "break" "class" "continue"
-    "def" "del" "elif" "else" "except" "finally" "for" "from" "global" "if" "import"
-    "in" "is" "lambda" "nonlocal" "not" "or" "pass" "raise" "return" "try" "while"
-    "with" "yield"
+    "and" "as" "assert" "async" "await"
+    "break"
+    "class" "continue"
+    "def" "del"
+    "elif" "else" "except"
+    "False" "finally" "for" "from"
+    "global"
+    "if" "import" "in" "is"
+    "lambda"
+    "None" "nonlocal" "not"
+    "or"
+    "pass"
+    "raise" "return"
+    "True" "try"
+    "while" "with"
+    "yield"
 )
 
-# Lee el contenido del archivo Python
-input_file=${1:-"input.py"}
-output_file=${2:-"output_temp.html"}
-content=$(cat "$input_file")
+# Orange color code for keywords
+KEYWORD_COLOR="\033[38;2;255;157;0m"
+RESET_COLOR="\033[0m"
 
-# Convierte el contenido a un formato HTML seguro (escapa < y >)
-content=$(echo "$content" | sed 's/</\&lt;/g' | sed 's/>/\&gt;/g')
+# Function to highlight Python keywords
+highlight_keywords() {
+    local file="$1"
+    local content
+    
+    # Read the file
+    content=$(<"$file")
+    
+    # Highlight each keyword
+    for keyword in "${KEYWORDS[@]}"; do
+        # Use regex to match whole words only
+        content=$(echo "$content" | sed -E "s/\b($keyword)\b/$KEYWORD_COLOR\1$RESET_COLOR/g")
+    done
+    
+    echo -e "$content"
+}
 
-# Resalta cada keyword
-for keyword in "${KEYWORDS[@]}"; do
-    # Usa límites de palabra para coincidir solo con palabras completas
-    content=$(echo "$content" | sed "s/\b${keyword}\b/<span style=\"color:#ff9d00\">&<\/span>/g")
-done
+# Check if a file was provided
+if [ $# -eq 0 ]; then
+    echo "Usage: $0 <python_file>"
+    exit 1
+fi
 
-# Guarda el contenido procesado en un archivo temporal
-echo "$content" > "$output_file"
+# Check if the file exists
+if [ ! -f "$1" ]; then
+    echo "Error: File '$1' not found"
+    exit 1
+fi
+
+# Highlight keywords in the provided file
+highlight_keywords "$1"
