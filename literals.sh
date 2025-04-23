@@ -28,6 +28,6 @@ $content
 EOF
 
 # Limpia el archivo temporal
-rm -f "$input_file"
+#rm -f "$input_file"
 
 echo "Archivo HTML generado: $output_file"
