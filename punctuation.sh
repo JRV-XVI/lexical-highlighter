@@ -13,3 +13,5 @@ while IFS= read -r line; do
 done < "$input"
 
 echo "</pre></body></html>" >> "$output"
+
+echo "Punctuation highlighted at: $output"
