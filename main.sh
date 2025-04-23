@@ -3,7 +3,7 @@
 input=${1:-"input.py"}
 output=${2:-"output.html"}
 
-echo "<html><body><pre style=\"font-family: monospace\">" > "$output"
+echo "<html><body><pre style=\"font-family: monospace; background-color: black; color: white;\">" > "$output"
 
 #automatic identification of variable names
 vars=$(grep -E '^\s*[a-zA-Z_][a-zA-Z0-9_]*\s*=' "$input" | \
@@ -39,35 +39,38 @@ while IFS= read -r line; do
     line=$(echo "$line" | sed -E "s/(f?)'([^']*)'/__STR__\1'\2'__END__/g")
 
     # 2. Resaltar operadores (solo fuera de los strings)
-    line=$(echo "$line" | sed -E 's/(&lt;=|&gt;=|==|!=|=|\+=|-=|\*=|\/=|\*\*=|\/\/|%|\+|-|\*|\/|\&amp;|\||\^|~|&lt;|&gt;|&lt;&lt;|&gt;&gt;)/<span style="color:red">\1<\/span>/g')
+    line=$(echo "$line" | sed -E 's/(&lt;=|&gt;=|==|!=|=|\+=|-=|\*=|\/=|\*\*=|\/\/|%|\+|-|\*|\/|\&amp;|\||\^|~|&lt;|&gt;|&lt;&lt;|&gt;&gt;)/<span style="color:lightpink">\1<\/span>/g')
 
     # 3. Resaltar números
-    line=$(echo "$line" | sed -E 's/\b([0-9]+([.][0-9]*)?([eE][+-]?[0-9]+)?j?)\b/<span style="color:#a5ff90">\1<\/span>/g')
+    line=$(echo "$line" | sed -E 's/\b([0-9]+([.][0-9]*)?([eE][+-]?[0-9]+)?j?)\b/<span style="color:palegreen">\1<\/span>/g')
 
     # 4. Restaurar strings con HTML
-    line=$(echo "$line" | sed -E 's/__STR__(f?)"([^"]*)"__END__/<span style="color:#a5ff90">\1"\2"<\/span>/g')
-    line=$(echo "$line" | sed -E "s/__STR__(f?)'([^']*)'__END__/<span style=\"color:#a5ff90\">\1'\2'<\/span>/g")
+    line=$(echo "$line" | sed -E 's/__STR__(f?)"([^"]*)"__END__/<span style="color:palegreen">\1"\2"<\/span>/g')
+    line=$(echo "$line" | sed -E "s/__STR__(f?)'([^']*)'__END__/<span style=\"color:palegreen\">\1'\2'<\/span>/g")
 
     # 5. Resaltar delimiters
-    line=$(echo "$line" | sed -E 's/([\(\)\{\}\[])/<span style="color:#87CEFA">\1<\/span>/g')    
+    line=$(echo "$line" | sed -E 's/([\(\)\{\}\[])/<span style="color:blue">\1<\/span>/g')    
 
     # 6. Resaltar comentarios de una sola linea #
     line=$(echo "$line" | sed -E 's/(#.*)/<span style="color:#DDA0DD">\1<\/span>/g')
 
     # 7. Variables
     for var in $var_list; do
-        line=$(echo "$line" | sed -E "s/\b$var\b/<span style=\"color:red\">$var<\/span>/g")
+        line=$(echo "$line" | sed -E "s/\b$var\b/<span style=\"color:#FF6F61\">$var<\/span>/g")
     done
 
     # 8. Functions
     for func in $func_list; do
-        line=$(echo "$line" | sed -E "s/\b$func\b/<span style=\"color:magenta\">$func<\/span>/g")
+        line=$(echo "$line" | sed -E "s/\b$func\b/<span style=\"color:#FF00FF\">$func<\/span>/g")
     done
 
     # 9. Classes
     for cls in $class_list; do
         line=$(echo "$line" | sed -E "s/\b$cls\b/<span style=\"color:#FF4500\">$cls<\/span>/g")
     done
+
+    # 10. Punctuation
+    highlighted=$(echo "$line" | sed -E 's/([,.:])/<span style="color:#ADD8E6">\1<\/span>/g')
 
     echo "$line" >> "$output"
 done < "$input"
