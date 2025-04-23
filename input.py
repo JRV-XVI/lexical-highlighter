@@ -1,14 +1,18 @@
 # This is a single-line comment
 
-"""This is a multi-line comment (docstring)
-Demonstrating all lexical categories in Python.
-"""
-
 import math
-from random import randint
+from random import randint 
 
+dic = {
+
+}
+
+lol = [
+
+]
 
 # Keywords and identifiers
+
 def function_name(param1, param2=123):
     my_variable = "hello"
     _privateVar = f"formatted {param1}"
@@ -68,3 +72,4 @@ def logic_operations(a, b):
 
 # Punctuation test
 print("Done.", end=", see you soon:")
+print()
