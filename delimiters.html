@@ -1,0 +1,92 @@
+<html><body><pre>
+# This is a single-line comment
+
+"""This is a multi-line comment <span style="color:blue">(</span>docstring<span style="color:blue">)</span>
+Demonstrating all lexical categories in Python.
+"""
+
+import math
+from random import randint 
+
+"""
+This is a comment
+"""
+
+dic = <span style="color:blue">{</span>
+
+<span style="color:blue">}</span>
+
+'''This is a comment
+'''
+
+lol = <span style="color:blue">[</span>
+
+]
+
+'''
+This is a comment
+'''
+
+'''This is another comment'''
+# Keywords and identifiers
+
+def function_name<span style="color:blue">(</span>param1, param2=123<span style="color:blue">)</span>:
+    my_variable = "hello"
+    _privateVar = f"formatted <span style="color:blue">{</span>param1<span style="color:blue">}</span>"
+    another_var = 45.67
+    complex_num = 5j
+    flag = True
+    nothing = None
+    if my_variable and another_var > 10:
+        result = param1 + param2
+        print<span style="color:blue">(</span>"Result:", result<span style="color:blue">)</span>
+    elif param2 < 100:
+        while param2 != 0:
+            param2 -= 1
+            continue
+    else:
+        pass
+
+    try:
+        raise ValueError<span style="color:blue">(</span>"Just a test"<span style="color:blue">)</span>
+    except Exception as e:
+        print<span style="color:blue">(</span>e<span style="color:blue">)</span>
+    finally:
+        return result
+
+
+class ClassName:
+    def __init__<span style="color:blue">(</span>self, value<span style="color:blue">)</span>:
+        self.value = value
+
+    def compute<span style="color:blue">(</span>self<span style="color:blue">)</span>:
+        for i in range<span style="color:blue">(</span>5<span style="color:blue">)</span>:
+            self.value **= 2
+            if self.value in <span style="color:blue">[</span>1, 4, 16]:
+                break
+            elif self.value not in <span style="color:blue">(</span>0, 2, 3<span style="color:blue">)</span>:
+                self.value //= 2
+
+    def __str__<span style="color:blue">(</span>self<span style="color:blue">)</span>:
+        return f"Value is <span style="color:blue">{</span>self.value<span style="color:blue">}</span>"
+
+
+def logic_operations<span style="color:blue">(</span>a, b<span style="color:blue">)</span>:
+    x = a and b or not a
+    y = a == b
+    z = a is b
+    w = a is not b
+    m = a & b
+    n = a | b
+    o = ~a
+    p = a ^ b
+    q = a << 2
+    r = b >> 1
+    s = 1 <= a <= 100
+    t = a >= b
+    return x, y, z, w, m, n, o, p, q, r, s, t
+
+
+# Punctuation test
+print<span style="color:blue">(</span>"Done.", end=", see you soon:"<span style="color:blue">)</span>
+</pre></body></html>
