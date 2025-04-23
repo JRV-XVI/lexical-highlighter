@@ -1,92 +1,72 @@
 <html><body><pre style="font-family: monospace">
-# This <span style="color:orange">is</span> a single<span style="color:red">-</span>line comment
+# This is a single<span style="color:red">-</span>line comment
 
-<span style="color:lightgreen">""</span>"This <span style="color:orange">is</span> a multi<span style="color:red">-</span>line comment (docstring)
-Demonstrating all lexical categories <span style="color:orange">in</span> Python.
-<span style="color:lightgreen">""</span>"
+<span style="color:#a5ff90">""</span>"This is a multi<span style="color:red">-</span>line comment (docstring)
+Demonstrating all lexical categories in Python.
+<span style="color:#a5ff90">""</span>"
 
-<span style="color:orange">import</span> math
-<span style="color:orange">from__END__ random __KEY__import</span> randint 
+import math
+from random import randint
 
-<span style="color:lightgreen">""</span>"
-This <span style="color:orange">is</span> a comment
-<span style="color:lightgreen">""</span>"
 
-dic <span style="color:red">=</span> {
-
-}
-
-<span style="color:lightgreen">''</span>'This <span style="color:orange">is</span> a comment
-<span style="color:lightgreen">''</span>'
-
-lol <span style="color:red">=</span> [
-
-]
-
-<span style="color:lightgreen">''</span>'
-This <span style="color:orange">is</span> a comment
-<span style="color:lightgreen">''</span>'
-
-<span style="color:lightgreen">''</span><span style="color:lightgreen">'This <span style="color:orange">is__END__ another comment'</span>__STR_SQ__''</span>
-# Keywords <span style="color:orange">and</span> identifiers
-
-<span style="color:orange">def</span> function_name(param1, param2<span style="color:red">=</span><span style="color:lightgreen">123</span>):
-    my_variable <span style="color:red">=</span> <span style="color:lightgreen">"hello"</span>
-    _privateVar <span style="color:red">=</span> <span style="color:lightgreen">f"formatted {param1}"</span>
-    another_var <span style="color:red">=</span> <span style="color:lightgreen">45.67</span>
-    complex_num <span style="color:red">=</span> <span style="color:lightgreen">5j</span>
-    flag <span style="color:red">=</span> <span style="color:orange">True</span>
-    nothing <span style="color:red">=</span> <span style="color:orange">None</span>
-    <span style="color:orange">if__END__ my_variable __KEY__and</span> another_var <span style="color:red">&gt;</span> <span style="color:lightgreen">10</span>:
+# Keywords and identifiers
+def function_name(param1, param2<span style="color:red">=</span><span style="color:#a5ff90">123</span>):
+    my_variable <span style="color:red">=</span> <span style="color:#a5ff90">"hello"</span>
+    _privateVar <span style="color:red">=</span> <span style="color:#a5ff90">f"formatted {param1}"</span>
+    another_var <span style="color:red">=</span> <span style="color:#a5ff90">45.67</span>
+    complex_num <span style="color:red">=</span> <span style="color:#a5ff90">5j</span>
+    flag <span style="color:red">=</span> True
+    nothing <span style="color:red">=</span> None
+    if my_variable and another_var <span style="color:red">&gt;</span> <span style="color:#a5ff90">10</span>:
         result <span style="color:red">=</span> param1 <span style="color:red">+</span> param2
-        print(<span style="color:lightgreen">"Result:"</span>, result)
-    <span style="color:orange">elif</span> param2 <span style="color:red">&lt;</span> <span style="color:lightgreen">100</span>:
-        <span style="color:orange">while</span> param2 <span style="color:red">!=</span> <span style="color:lightgreen">0</span>:
-            param2 <span style="color:red">-=</span> <span style="color:lightgreen">1</span>
-            <span style="color:orange">continue</span>
-    <span style="color:orange">else</span>:
-        <span style="color:orange">pass</span>
+        print(<span style="color:#a5ff90">"Result:"</span>, result)
+    elif param2 <span style="color:red">&lt;</span> <span style="color:#a5ff90">100</span>:
+        while param2 <span style="color:red">!=</span> <span style="color:#a5ff90">0</span>:
+            param2 <span style="color:red">-=</span> <span style="color:#a5ff90">1</span>
+            continue
+    else:
+        pass
 
-    <span style="color:orange">try</span>:
-        <span style="color:orange">raise__END__ ValueError(__STR_DQ__"Just a test"</span>)
-    <span style="color:orange">except__END__ Exception __KEY__as</span> e:
+    try:
+        raise ValueError(<span style="color:#a5ff90">"Just a test"</span>)
+    except Exception as e:
         print(e)
-    <span style="color:orange">finally</span>:
-        <span style="color:orange">return</span> result
+    finally:
+        return result
 
 
-<span style="color:orange">class</span> ClassName:
-    <span style="color:orange">def</span> __init__(self, value):
+class ClassName:
+    def __init__(self, value):
         self.value <span style="color:red">=</span> value
 
-    <span style="color:orange">def</span> compute(self):
-        <span style="color:orange">for__END__ i __KEY__in</span> range(<span style="color:lightgreen">5</span>):
-            self.value <span style="color:red">**=</span> <span style="color:lightgreen">2</span>
-            <span style="color:orange">if__END__ self.value __KEY__in</span> [<span style="color:lightgreen">1</span>, <span style="color:lightgreen">4</span>, <span style="color:lightgreen">16</span>]:
-                <span style="color:orange">break</span>
-            <span style="color:orange">elif__END__ self.value __KEY__not__END__ __KEY__in</span> (<span style="color:lightgreen">0</span>, <span style="color:lightgreen">2</span>, <span style="color:lightgreen">3</span>):
-                self.value <span style="color:red">//</span><span style="color:red">=</span> <span style="color:lightgreen">2</span>
+    def compute(self):
+        for i in range(<span style="color:#a5ff90">5</span>):
+            self.value <span style="color:red">**=</span> <span style="color:#a5ff90">2</span>
+            if self.value in [<span style="color:#a5ff90">1</span>, <span style="color:#a5ff90">4</span>, <span style="color:#a5ff90">16</span>]:
+                break
+            elif self.value not in (<span style="color:#a5ff90">0</span>, <span style="color:#a5ff90">2</span>, <span style="color:#a5ff90">3</span>):
+                self.value <span style="color:red">//</span><span style="color:red">=</span> <span style="color:#a5ff90">2</span>
 
-    <span style="color:orange">def</span> __str__(self):
-        <span style="color:orange">return__END__ __STR_DQ__f"Value __KEY__is__END__ {self.value}"</span>
+    def __str__(self):
+        return <span style="color:#a5ff90">f"Value is {self.value}"</span>
 
 
-<span style="color:orange">def</span> logic_operations(a, b):
-    x <span style="color:red">=</span> a <span style="color:orange">and__END__ b __KEY__or__END__ __KEY__not</span> a
+def logic_operations(a, b):
+    x <span style="color:red">=</span> a and b or not a
     y <span style="color:red">=</span> a <span style="color:red">==</span> b
-    z <span style="color:red">=</span> a <span style="color:orange">is</span> b
-    w <span style="color:red">=</span> a <span style="color:orange">is__END__ __KEY__not</span> b
+    z <span style="color:red">=</span> a is b
+    w <span style="color:red">=</span> a is not b
     m <span style="color:red">=</span> a <span style="color:red">&amp;</span> b
     n <span style="color:red">=</span> a <span style="color:red">|</span> b
     o <span style="color:red">=</span> <span style="color:red">~</span>a
     p <span style="color:red">=</span> a <span style="color:red">^</span> b
-    q <span style="color:red">=</span> a <span style="color:red">&lt;&lt;</span> <span style="color:lightgreen">2</span>
-    r <span style="color:red">=</span> b <span style="color:red">&gt;&gt;</span> <span style="color:lightgreen">1</span>
-    s <span style="color:red">=</span> <span style="color:lightgreen">1</span> <span style="color:red">&lt;=</span> a <span style="color:red">&lt;=</span> <span style="color:lightgreen">100</span>
+    q <span style="color:red">=</span> a <span style="color:red">&lt;&lt;</span> <span style="color:#a5ff90">2</span>
+    r <span style="color:red">=</span> b <span style="color:red">&gt;&gt;</span> <span style="color:#a5ff90">1</span>
+    s <span style="color:red">=</span> <span style="color:#a5ff90">1</span> <span style="color:red">&lt;=</span> a <span style="color:red">&lt;=</span> <span style="color:#a5ff90">100</span>
     t <span style="color:red">=</span> a <span style="color:red">&gt;=</span> b
-    <span style="color:orange">return</span> x, y, z, w, m, n, o, p, q, r, s, t
+    return x, y, z, w, m, n, o, p, q, r, s, t
 
 
 # Punctuation test
-print(<span style="color:lightgreen">"Done."</span>, end<span style="color:red">=</span><span style="color:lightgreen">", see you soon:"</span>)
+print(<span style="color:#a5ff90">"Done."</span>, end<span style="color:red">=</span><span style="color:#a5ff90">", see you soon:"</span>)
 </pre></body></html>
