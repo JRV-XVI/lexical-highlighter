@@ -23,6 +23,12 @@ while IFS= read -r line; do
     line=$(echo "$line" | sed -E 's/__STR__(f?)"([^"]*)"__END__/<span style="color:#a5ff90">\1"\2"<\/span>/g')
     line=$(echo "$line" | sed -E "s/__STR__(f?)'([^']*)'__END__/<span style=\"color:#a5ff90\">\1'\2'<\/span>/g")
 
+    # 5. Resaltar delimiters
+    line=$(echo "$line" | sed -E 's/([\(\)\{\}\[])/<span style="color:blue">\1<\/span>/g')    
+
+    # 6. Resaltar comentarios de una sola linea #
+    line=$(echo "$line" | sed -E 's/(#.*)/<span style="color:green">\1<\/span>/g')
+
     echo "$line" >> "$output"
 done < "$input"
 

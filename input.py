@@ -1,32 +1,16 @@
 # This is a single-line comment
 
-"""This is a multi-line comment (docstring)
-Demonstrating all lexical categories in Python.
-"""
-
 import math
 from random import randint 
-
-"""
-This is a comment
-"""
 
 dic = {
 
 }
 
-'''This is a comment
-'''
-
 lol = [
 
 ]
 
-'''
-This is a comment
-'''
-
-'''This is another comment'''
 # Keywords and identifiers
 
 def function_name(param1, param2=123):
