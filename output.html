@@ -1,34 +1,34 @@
-<html><body><pre>
-# This <span style="color:pink">is</span> a single<span style="color:pink">-</span>line comment
+<html><body><pre style="font-family: monospace">
+# This is a single<span style="color:red">-</span>line comment
 
-"""This <span style="color:pink">is</span> a multi<span style="color:pink">-</span>line comment (docstring)
-Demonstrating all lexical categories <span style="color:pink">in</span> Python.
-"""
+<span style="color:#a5ff90">""</span>"This is a multi<span style="color:red">-</span>line comment (docstring)
+Demonstrating all lexical categories in Python.
+<span style="color:#a5ff90">""</span>"
 
 import math
 from random import randint
 
 
-# Keywords <span style="color:pink">and</span> identifiers
-def function_name(param1, param2<span style="color:pink">=</span>123):
-    my_variable = "hello"
-    _privateVar = f"formatted {param1}"
-    another_var = 45.67
-    complex_num = 5j
-    flag = True
-    nothing = None
-    if my_variable <span style="color:pink">and</span> another_var > 10:
-        result = param1 + param2
-        print("Result:", result)
-    elif param2 < 100:
-        while param2 != 0:
-            param2 -= 1
+# Keywords and identifiers
+def function_name(param1, param2<span style="color:red">=</span><span style="color:#a5ff90">123</span>):
+    my_variable <span style="color:red">=</span> <span style="color:#a5ff90">"hello"</span>
+    _privateVar <span style="color:red">=</span> <span style="color:#a5ff90">f"formatted {param1}"</span>
+    another_var <span style="color:red">=</span> <span style="color:#a5ff90">45.67</span>
+    complex_num <span style="color:red">=</span> <span style="color:#a5ff90">5j</span>
+    flag <span style="color:red">=</span> True
+    nothing <span style="color:red">=</span> None
+    if my_variable and another_var <span style="color:red">&gt;</span> <span style="color:#a5ff90">10</span>:
+        result <span style="color:red">=</span> param1 <span style="color:red">+</span> param2
+        print(<span style="color:#a5ff90">"Result:"</span>, result)
+    elif param2 <span style="color:red">&lt;</span> <span style="color:#a5ff90">100</span>:
+        while param2 <span style="color:red">!=</span> <span style="color:#a5ff90">0</span>:
+            param2 <span style="color:red">-=</span> <span style="color:#a5ff90">1</span>
             continue
     else:
         pass
 
     try:
-        raise ValueError("Just a test")
+        raise ValueError(<span style="color:#a5ff90">"Just a test"</span>)
     except Exception as e:
         print(e)
     finally:
@@ -37,36 +37,36 @@ def function_name(param1, param2<span style="color:pink">=</span>123):
 
 class ClassName:
     def __init__(self, value):
-        self.value = value
+        self.value <span style="color:red">=</span> value
 
     def compute(self):
-        for i <span style="color:pink">in</span> range(5):
-            self.value **= 2
-            if self.value <span style="color:pink">in</span> [1, 4, 16]:
+        for i in range(<span style="color:#a5ff90">5</span>):
+            self.value <span style="color:red">**=</span> <span style="color:#a5ff90">2</span>
+            if self.value in [<span style="color:#a5ff90">1</span>, <span style="color:#a5ff90">4</span>, <span style="color:#a5ff90">16</span>]:
                 break
-            elif self.value <span style="color:pink">not</span> <span style="color:pink">in</span> (0, 2, 3):
-                self.value //= 2
+            elif self.value not in (<span style="color:#a5ff90">0</span>, <span style="color:#a5ff90">2</span>, <span style="color:#a5ff90">3</span>):
+                self.value <span style="color:red">//</span><span style="color:red">=</span> <span style="color:#a5ff90">2</span>
 
     def __str__(self):
-        return f"Value <span style="color:pink">is</span> {self.value}"
+        return <span style="color:#a5ff90">f"Value is {self.value}"</span>
 
 
 def logic_operations(a, b):
-    x = a <span style="color:pink">and</span> b <span style="color:pink">or</span> <span style="color:pink">not</span> a
-    y = a == b
-    z = a <span style="color:pink">is</span> b
-    w = a <span style="color:pink">is</span> <span style="color:pink">not</span> b
-    m = a & b
-    n = a | b
-    o = ~a
-    p = a ^ b
-    q = a << 2
-    r = b >> 1
-    s = 1 <= a <= 100
-    t = a >= b
+    x <span style="color:red">=</span> a and b or not a
+    y <span style="color:red">=</span> a <span style="color:red">==</span> b
+    z <span style="color:red">=</span> a is b
+    w <span style="color:red">=</span> a is not b
+    m <span style="color:red">=</span> a <span style="color:red">&amp;</span> b
+    n <span style="color:red">=</span> a <span style="color:red">|</span> b
+    o <span style="color:red">=</span> <span style="color:red">~</span>a
+    p <span style="color:red">=</span> a <span style="color:red">^</span> b
+    q <span style="color:red">=</span> a <span style="color:red">&lt;&lt;</span> <span style="color:#a5ff90">2</span>
+    r <span style="color:red">=</span> b <span style="color:red">&gt;&gt;</span> <span style="color:#a5ff90">1</span>
+    s <span style="color:red">=</span> <span style="color:#a5ff90">1</span> <span style="color:red">&lt;=</span> a <span style="color:red">&lt;=</span> <span style="color:#a5ff90">100</span>
+    t <span style="color:red">=</span> a <span style="color:red">&gt;=</span> b
     return x, y, z, w, m, n, o, p, q, r, s, t
 
 
 # Punctuation test
-print("Done.", end=", see you soon:")
+print(<span style="color:#a5ff90">"Done."</span>, end<span style="color:red">=</span><span style="color:#a5ff90">", see you soon:"</span>)
 </pre></body></html>
