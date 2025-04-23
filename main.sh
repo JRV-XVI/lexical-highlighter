@@ -72,40 +72,32 @@ while IFS= read -r line; do
     # 7. Mark operators
     code=$(echo "$code" | sed -E 's/(&lt;=|&gt;=|==|!=|=|\+=|-=|\*=|\/=|\*\*=|\/\/=|%=|\*\*|\/\/|%|\+|-|\*|\/|\&amp;|\||\^|~|&lt;|&gt;|&lt;&lt;|&gt;&gt;)/__OPERATOR__\1__END_OPERATOR__/g')
     
-    # 8. Mark delimiters
-    code=$(echo "$code" | sed -E 's/([\(\)\[\]\{\}])/__DELIMITER__\1__END_DELIMITER__/g')
-    
-    # 9. Mark punctuation (lowest priority)
+    # 8. Mark punctuation (lowest priority)
     code=$(echo "$code" | sed -E 's/([,.;:])/__PUNCT__\1__END_PUNCT__/g')
     
-    # Step 4: Replace placeholders with HTML spans - Order also matters here!
-    # Perform replacements in reverse order to avoid nested placeholder issues
+    # Step 4: Replace placeholders with HTML spans - FIXED PATTERNS
+    # Use patterns that capture entire content regardless of underscores
     
-    # Replace placeholders in a specific order to handle nested patterns
-    # Start with the most specific/inner elements and work outward
-    
-    # Replace strings first (they might contain other patterns)
-    code=$(echo "$code" | sed 's/__STRING__\([^_]*\)__END_STRING__/<span style="color:palegreen">\1<\/span>/g')
+    # Replace strings first
+    code=$(echo "$code" | sed -E 's/__STRING__([^_]*)__END_STRING__/<span style="color:palegreen">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__STRING__([[:print:]]+?)__END_STRING__/<span style="color:palegreen">\1<\/span>/g')
     
     # Replace numbers
-    code=$(echo "$code" | sed 's/__NUMBER__\([^_]*\)__END_NUMBER__/<span style="color:palegreen">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__NUMBER__([^_]*)__END_NUMBER__/<span style="color:palegreen">\1<\/span>/g')
     
     # Replace punctuation
-    code=$(echo "$code" | sed 's/__PUNCT__\([^_]*\)__END_PUNCT__/<span style="color:#ADD8E6">\1<\/span>/g')
-    
-    # Replace delimiters
-    code=$(echo "$code" | sed 's/__DELIMITER__\([^_]*\)__END_DELIMITER__/<span style="color:blue">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__PUNCT__([^_]*)__END_PUNCT__/<span style="color:#ADD8E6">\1<\/span>/g')
     
     # Replace operators
-    code=$(echo "$code" | sed 's/__OPERATOR__\([^_]*\)__END_OPERATOR__/<span style="color:lightpink">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__OPERATOR__([^_]*)__END_OPERATOR__/<span style="color:lightpink">\1<\/span>/g')
     
     # Replace keywords
-    code=$(echo "$code" | sed 's/__KEYWORD__\([^_]*\)__END_KEYWORD__/<span style="color:orange">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__KEYWORD__([^_]*)__END_KEYWORD__/<span style="color:orange">\1<\/span>/g')
     
-    # Replace classes, functions, variables (in that order)
-    code=$(echo "$code" | sed 's/__CLASS__\([^_]*\)__END_CLASS__/<span style="color:#FF4500">\1<\/span>/g')
-    code=$(echo "$code" | sed 's/__FUNC__\([^_]*\)__END_FUNC__/<span style="color:#FF00FF">\1<\/span>/g')
-    code=$(echo "$code" | sed 's/__VAR__\([^_]*\)__END_VAR__/<span style="color:#FF6F61">\1<\/span>/g')
+    # Replace classes, functions, variables with improved patterns
+    code=$(echo "$code" | sed -E 's/__CLASS__([[:alnum:]_]*)__END_CLASS__/<span style="color:#FF4500">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__FUNC__([[:alnum:]_]*)__END_FUNC__/<span style="color:#FF00FF">\1<\/span>/g')
+    code=$(echo "$code" | sed -E 's/__VAR__([[:alnum:]_]*)__END_VAR__/<span style="color:#FF6F61">\1<\/span>/g')
     
     # Step 5: Handle comment if exists
     if [ "$has_comment" = true ]; then
