@@ -16,7 +16,7 @@ lol = [
 def function_name(param1, param2=123):
     my_variable = "hello"
     _privateVar = f"formatted {param1}"
-    another_var = 45.67
+    another_var = 4567
     complex_num = 5j
     flag = True
     nothing = None
@@ -71,5 +71,5 @@ def logic_operations(a, b):
 
 
 # Punctuation test
-print("Done.", end=", see you soon:")
+print("Done. See you soon:")
 print()

@@ -1,72 +1,77 @@
-<html><body><pre style="font-family: monospace">
-# This is a single<span style="color:red">-</span>line comment
-
-<span style="color:#a5ff90">""</span>"This is a multi<span style="color:red">-</span>line comment (docstring)
-Demonstrating all lexical categories in Python.
-<span style="color:#a5ff90">""</span>"
-
-import math
-from random import randint
-
-
-# Keywords and identifiers
-def function_name(param1, param2<span style="color:red">=</span><span style="color:#a5ff90">123</span>):
-    my_variable <span style="color:red">=</span> <span style="color:#a5ff90">"hello"</span>
-    _privateVar <span style="color:red">=</span> <span style="color:#a5ff90">f"formatted {param1}"</span>
-    another_var <span style="color:red">=</span> <span style="color:#a5ff90">45.67</span>
-    complex_num <span style="color:red">=</span> <span style="color:#a5ff90">5j</span>
-    flag <span style="color:red">=</span> True
-    nothing <span style="color:red">=</span> None
-    if my_variable and another_var <span style="color:red">&gt;</span> <span style="color:#a5ff90">10</span>:
-        result <span style="color:red">=</span> param1 <span style="color:red">+</span> param2
-        print(<span style="color:#a5ff90">"Result:"</span>, result)
-    elif param2 <span style="color:red">&lt;</span> <span style="color:#a5ff90">100</span>:
-        while param2 <span style="color:red">!=</span> <span style="color:#a5ff90">0</span>:
-            param2 <span style="color:red">-=</span> <span style="color:#a5ff90">1</span>
-            continue
-    else:
-        pass
-
-    try:
-        raise ValueError(<span style="color:#a5ff90">"Just a test"</span>)
-    except Exception as e:
-        print(e)
-    finally:
-        return result
-
-
-class ClassName:
-    def __init__(self, value):
-        self.value <span style="color:red">=</span> value
-
-    def compute(self):
-        for i in range(<span style="color:#a5ff90">5</span>):
-            self.value <span style="color:red">**=</span> <span style="color:#a5ff90">2</span>
-            if self.value in [<span style="color:#a5ff90">1</span>, <span style="color:#a5ff90">4</span>, <span style="color:#a5ff90">16</span>]:
-                break
-            elif self.value not in (<span style="color:#a5ff90">0</span>, <span style="color:#a5ff90">2</span>, <span style="color:#a5ff90">3</span>):
-                self.value <span style="color:red">//</span><span style="color:red">=</span> <span style="color:#a5ff90">2</span>
-
-    def __str__(self):
-        return <span style="color:#a5ff90">f"Value is {self.value}"</span>
-
-
-def logic_operations(a, b):
-    x <span style="color:red">=</span> a and b or not a
-    y <span style="color:red">=</span> a <span style="color:red">==</span> b
-    z <span style="color:red">=</span> a is b
-    w <span style="color:red">=</span> a is not b
-    m <span style="color:red">=</span> a <span style="color:red">&amp;</span> b
-    n <span style="color:red">=</span> a <span style="color:red">|</span> b
-    o <span style="color:red">=</span> <span style="color:red">~</span>a
-    p <span style="color:red">=</span> a <span style="color:red">^</span> b
-    q <span style="color:red">=</span> a <span style="color:red">&lt;&lt;</span> <span style="color:#a5ff90">2</span>
-    r <span style="color:red">=</span> b <span style="color:red">&gt;&gt;</span> <span style="color:#a5ff90">1</span>
-    s <span style="color:red">=</span> <span style="color:#a5ff90">1</span> <span style="color:red">&lt;=</span> a <span style="color:red">&lt;=</span> <span style="color:#a5ff90">100</span>
-    t <span style="color:red">=</span> a <span style="color:red">&gt;=</span> b
-    return x, y, z, w, m, n, o, p, q, r, s, t
-
-
-# Punctuation test
-print(<span style="color:#a5ff90">"Done."</span>, end<span style="color:red">=</span><span style="color:#a5ff90">", see you soon:"</span>)
-</pre></body></html>
+<html><body><pre style="font-family: monospace; background-color: black; color: white;">
+    <span style="color:#DDA0DD"># This is a single-line comment</span>
+    
+    <span style="color:orange">import</span> math
+    <span style="color:orange">from</span> random <span style="color:orange">import</span> randint 
+    
+    <span style="color:#FF6F61">dic</span> <span style="color:lightpink">=</span> {
+    
+    }
+    
+    <span style="color:#FF6F61">lol</span> <span style="color:lightpink">=</span> [
+    
+    ]
+    
+    <span style="color:#DDA0DD"># Keywords and identifiers</span>
+    
+    <span style="color:orange">def</span> <span style="color:#FF00FF">function_name</span>(<span style="color:#FF6F61">param1</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">param2</span><span style="color:lightpink">=</span><span style="color:palegreen">123</span>)<span style="color:#ADD8E6">:</span>
+        <span style="color:#FF6F61">my_variable</span> <span style="color:lightpink">=</span> <span style="color:palegreen">"hello"</span>
+        <span style="color:#FF6F61">_privateVar</span> <span style="color:lightpink">=</span> <span style="color:palegreen">f"formatted {<span style="color:#FF6F61">param1</span>}"</span>
+        <span style="color:#FF6F61">another_var</span> <span style="color:lightpink">=</span> <span style="color:palegreen">4567</span>
+        <span style="color:#FF6F61">complex_num</span> <span style="color:lightpink">=</span> <span style="color:palegreen">5j</span>
+        <span style="color:#FF6F61">flag</span> <span style="color:lightpink">=</span> <span style="color:orange">True</span>
+        <span style="color:#FF6F61">nothing</span> <span style="color:lightpink">=</span> <span style="color:orange">None</span>
+        <span style="color:orange">if</span> <span style="color:#FF6F61">my_variable</span> <span style="color:orange">and</span> <span style="color:#FF6F61">another_var</span> <span style="color:lightpink">&gt<span style="color:#ADD8E6">;</span></span> <span style="color:palegreen">10</span><span style="color:#ADD8E6">:</span>
+            <span style="color:#FF6F61">result</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">param1</span> <span style="color:lightpink">+</span> <span style="color:#FF6F61">param2</span>
+            print(<span style="color:palegreen">"Result<span style="color:#ADD8E6">:</span>"</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">result</span>)
+        <span style="color:orange">elif</span> <span style="color:#FF6F61">param2</span> <span style="color:lightpink">&lt<span style="color:#ADD8E6">;</span></span> <span style="color:palegreen">100</span><span style="color:#ADD8E6">:</span>
+            <span style="color:orange">while</span> <span style="color:#FF6F61">param2</span> <span style="color:lightpink">!=</span> <span style="color:palegreen">0</span><span style="color:#ADD8E6">:</span>
+                <span style="color:#FF6F61">param2</span> <span style="color:lightpink">-=</span> <span style="color:palegreen">1</span>
+                <span style="color:orange">continue</span>
+        <span style="color:orange">else</span><span style="color:#ADD8E6">:</span>
+            <span style="color:orange">pass</span>
+    
+        <span style="color:orange">try</span><span style="color:#ADD8E6">:</span>
+            <span style="color:orange">raise</span> ValueError(<span style="color:palegreen">"Just <span style="color:#FF6F61">a</span> test"</span>)
+        <span style="color:orange">except</span> Exception <span style="color:orange">as</span> e<span style="color:#ADD8E6">:</span>
+            print(e)
+        <span style="color:orange">finally</span><span style="color:#ADD8E6">:</span>
+            <span style="color:orange">return</span> <span style="color:#FF6F61">result</span>
+    
+    
+    <span style="color:orange">class</span> <span style="color:#FF4500">ClassName</span><span style="color:#ADD8E6">:</span>
+        <span style="color:orange">def</span> <span style="color:#FF00FF">__init__</span>(<span style="color:#FF6F61">self</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">value</span>)<span style="color:#ADD8E6">:</span>
+            <span style="color:#FF6F61">self</span><span style="color:#ADD8E6">.</span><span style="color:#FF6F61">value</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">value</span>
+    
+        <span style="color:orange">def</span> <span style="color:#FF00FF">compute</span>(<span style="color:#FF6F61">self</span>)<span style="color:#ADD8E6">:</span>
+            <span style="color:orange">for</span> <span style="color:#FF6F61">i</span> <span style="color:orange">in</span> range(<span style="color:palegreen">5</span>)<span style="color:#ADD8E6">:</span>
+                <span style="color:#FF6F61">self</span><span style="color:#ADD8E6">.</span><span style="color:#FF6F61">value</span> <span style="color:lightpink">**=</span> <span style="color:palegreen">2</span>
+                <span style="color:orange">if</span> <span style="color:#FF6F61">self</span><span style="color:#ADD8E6">.</span><span style="color:#FF6F61">value</span> <span style="color:orange">in</span> [<span style="color:palegreen">1</span><span style="color:#ADD8E6">,</span> <span style="color:palegreen">4</span><span style="color:#ADD8E6">,</span> <span style="color:palegreen">16</span>]<span style="color:#ADD8E6">:</span>
+                    <span style="color:orange">break</span>
+                <span style="color:orange">elif</span> <span style="color:#FF6F61">self</span><span style="color:#ADD8E6">.</span><span style="color:#FF6F61">value</span> <span style="color:orange">not</span> <span style="color:orange">in</span> (<span style="color:palegreen">0</span><span style="color:#ADD8E6">,</span> <span style="color:palegreen">2</span><span style="color:#ADD8E6">,</span> <span style="color:palegreen">3</span>)<span style="color:#ADD8E6">:</span>
+                    <span style="color:#FF6F61">self</span><span style="color:#ADD8E6">.</span><span style="color:#FF6F61">value</span> <span style="color:lightpink">//=</span> <span style="color:palegreen">2</span>
+    
+        <span style="color:orange">def</span> <span style="color:#FF00FF">__str__</span>(<span style="color:#FF6F61">self</span>)<span style="color:#ADD8E6">:</span>
+            <span style="color:orange">return</span> <span style="color:palegreen">f"Value <span style="color:orange">is</span> {<span style="color:#FF6F61">self</span><span style="color:#ADD8E6">.</span><span style="color:#FF6F61">value</span>}"</span>
+    
+    
+    <span style="color:orange">def</span> <span style="color:#FF00FF">logic_operations</span>(<span style="color:#FF6F61">a</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">b</span>)<span style="color:#ADD8E6">:</span>
+        <span style="color:#FF6F61">x</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:orange">and</span> <span style="color:#FF6F61">b</span> <span style="color:orange">or</span> <span style="color:orange">not</span> <span style="color:#FF6F61">a</span>
+        <span style="color:#FF6F61">y</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">==</span> <span style="color:#FF6F61">b</span>
+        <span style="color:#FF6F61">z</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:orange">is</span> <span style="color:#FF6F61">b</span>
+        <span style="color:#FF6F61">w</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:orange">is</span> <span style="color:orange">not</span> <span style="color:#FF6F61">b</span>
+        <span style="color:#FF6F61">m</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">&amp<span style="color:#ADD8E6">;</span></span> <span style="color:#FF6F61">b</span>
+        <span style="color:#FF6F61">n</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">|</span> <span style="color:#FF6F61">b</span>
+        <span style="color:#FF6F61">o</span> <span style="color:lightpink">=</span> <span style="color:lightpink">~</span><span style="color:#FF6F61">a</span>
+        <span style="color:#FF6F61">p</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">^</span> <span style="color:#FF6F61">b</span>
+        <span style="color:#FF6F61">q</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">&lt<span style="color:#ADD8E6">;</span>&lt<span style="color:#ADD8E6">;</span></span> <span style="color:palegreen">2</span>
+        <span style="color:#FF6F61">r</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">b</span> <span style="color:lightpink">&gt<span style="color:#ADD8E6">;</span>&gt<span style="color:#ADD8E6">;</span></span> <span style="color:palegreen">1</span>
+        <span style="color:#FF6F61">s</span> <span style="color:lightpink">=</span> <span style="color:palegreen">1</span> <span style="color:lightpink">&lt<span style="color:#ADD8E6">;</span>=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">&lt<span style="color:#ADD8E6">;</span>=</span> <span style="color:palegreen">100</span>
+        <span style="color:#FF6F61">t</span> <span style="color:lightpink">=</span> <span style="color:#FF6F61">a</span> <span style="color:lightpink">&gt<span style="color:#ADD8E6">;</span>=</span> <span style="color:#FF6F61">b</span>
+        <span style="color:orange">return</span> <span style="color:#FF6F61">x</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">y</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">z</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">w</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">m</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">n</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">o</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">p</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">q</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">r</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">s</span><span style="color:#ADD8E6">,</span> <span style="color:#FF6F61">t</span>
+    
+    
+    <span style="color:#DDA0DD"># Punctuation test</span>
+    print(<span style="color:palegreen">"Done<span style="color:#ADD8E6">.</span> See you soon<span style="color:#ADD8E6">:</span>"</span>)
+    </pre></body></html>
+    
