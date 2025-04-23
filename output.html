@@ -1,8 +1,8 @@
 <html><body><pre>
-# This is <span style="color:red">a</span> single-line comment
+# This is a single-line comment
 
-"""This is <span style="color:red">a</span> multi-line comment (docstring)
-Demonstrating all lexical categories in Python.
+"""This is a multi-line comment (docstring)
+Demonstrating all lexical categories in Python<span style="color:cyan">.</span>
 """
 
 import math
@@ -10,63 +10,63 @@ from random import randint
 
 
 # Keywords and identifiers
-def <span style="color:red">function_name</span>(<span style="color:red">param1</span>, <span style="color:red">param2</span>=123):
-    <span style="color:red">my_variable</span> = "hello"
-    <span style="color:red">_privateVar</span> = f"formatted {<span style="color:red">param1</span>}"
-    <span style="color:red">another_var</span> = 45.67
-    <span style="color:red">complex_num</span> = 5j
-    <span style="color:red">flag</span> = True
-    <span style="color:red">nothing</span> = None
-    if <span style="color:red">my_variable</span> and <span style="color:red">another_var</span> > 10:
-        <span style="color:red">result</span> = <span style="color:red">param1</span> + <span style="color:red">param2</span>
-        print("Result:", <span style="color:red">result</span>)
-    elif <span style="color:red">param2</span> < 100:
-        while <span style="color:red">param2</span> != 0:
-            <span style="color:red">param2</span> -= 1
+def function_name(param1<span style="color:cyan">,</span> param2=123)<span style="color:cyan">:</span>
+    my_variable = "hello"
+    _privateVar = f"formatted {param1}"
+    another_var = 45<span style="color:cyan">.</span>67
+    complex_num = 5j
+    flag = True
+    nothing = None
+    if my_variable and another_var > 10<span style="color:cyan">:</span>
+        result = param1 + param2
+        print("Result<span style="color:cyan">:</span>"<span style="color:cyan">,</span> result)
+    elif param2 < 100<span style="color:cyan">:</span>
+        while param2 != 0<span style="color:cyan">:</span>
+            param2 -= 1
             continue
-    else:
+    else<span style="color:cyan">:</span>
         pass
 
-    try:
-        raise ValueError("Just <span style="color:red">a</span> test")
-    except Exception as e:
+    try<span style="color:cyan">:</span>
+        raise ValueError("Just a test")
+    except Exception as e<span style="color:cyan">:</span>
         print(e)
-    finally:
-        return <span style="color:red">result</span>
+    finally<span style="color:cyan">:</span>
+        return result
 
 
-class <span style="color:red">ClassName</span>:
-    def <span style="color:red">__init__</span>(<span style="color:red">self</span>, <span style="color:red">value</span>):
-        <span style="color:red">self</span>.<span style="color:red">value</span> = <span style="color:red">value</span>
+class ClassName<span style="color:cyan">:</span>
+    def __init__(self<span style="color:cyan">,</span> value)<span style="color:cyan">:</span>
+        self<span style="color:cyan">.</span>value = value
 
-    def <span style="color:red">compute</span>(<span style="color:red">self</span>):
-        for <span style="color:red">i</span> in range(5):
-            <span style="color:red">self</span>.<span style="color:red">value</span> **= 2
-            if <span style="color:red">self</span>.<span style="color:red">value</span> in [1, 4, 16]:
+    def compute(self)<span style="color:cyan">:</span>
+        for i in range(5)<span style="color:cyan">:</span>
+            self<span style="color:cyan">.</span>value **= 2
+            if self<span style="color:cyan">.</span>value in [1<span style="color:cyan">,</span> 4<span style="color:cyan">,</span> 16]<span style="color:cyan">:</span>
                 break
-            elif <span style="color:red">self</span>.<span style="color:red">value</span> not in (0, 2, 3):
-                <span style="color:red">self</span>.<span style="color:red">value</span> //= 2
+            elif self<span style="color:cyan">.</span>value not in (0<span style="color:cyan">,</span> 2<span style="color:cyan">,</span> 3)<span style="color:cyan">:</span>
+                self<span style="color:cyan">.</span>value //= 2
 
-    def <span style="color:red">__str__</span>(<span style="color:red">self</span>):
-        return f"Value is {<span style="color:red">self</span>.<span style="color:red">value</span>}"
+    def __str__(self)<span style="color:cyan">:</span>
+        return f"Value is {self<span style="color:cyan">.</span>value}"
 
 
-def <span style="color:red">logic_operations</span>(<span style="color:red">a</span>, <span style="color:red">b</span>):
-    <span style="color:red">x</span> = <span style="color:red">a</span> and <span style="color:red">b</span> or not <span style="color:red">a</span>
-    <span style="color:red">y</span> = <span style="color:red">a</span> == <span style="color:red">b</span>
-    <span style="color:red">z</span> = <span style="color:red">a</span> is <span style="color:red">b</span>
-    <span style="color:red">w</span> = <span style="color:red">a</span> is not <span style="color:red">b</span>
-    <span style="color:red">m</span> = <span style="color:red">a</span> & <span style="color:red">b</span>
-    <span style="color:red">n</span> = <span style="color:red">a</span> | <span style="color:red">b</span>
-    <span style="color:red">o</span> = ~<span style="color:red">a</span>
-    <span style="color:red">p</span> = <span style="color:red">a</span> ^ <span style="color:red">b</span>
-    <span style="color:red">q</span> = <span style="color:red">a</span> << 2
-    <span style="color:red">r</span> = <span style="color:red">b</span> >> 1
-    <span style="color:red">s</span> = 1 <= <span style="color:red">a</span> <= 100
-    <span style="color:red">t</span> = <span style="color:red">a</span> >= <span style="color:red">b</span>
-    return <span style="color:red">x</span>, <span style="color:red">y</span>, <span style="color:red">z</span>, <span style="color:red">w</span>, <span style="color:red">m</span>, <span style="color:red">n</span>, <span style="color:red">o</span>, <span style="color:red">p</span>, <span style="color:red">q</span>, <span style="color:red">r</span>, <span style="color:red">s</span>, <span style="color:red">t</span>
+def logic_operations(a<span style="color:cyan">,</span> b)<span style="color:cyan">:</span>
+    x = a and b or not a
+    y = a == b
+    z = a is b
+    w = a is not b
+    m = a & b
+    n = a | b
+    o = ~a
+    p = a ^ b
+    q = a << 2
+    r = b >> 1
+    s = 1 <= a <= 100
+    t = a >= b
+    return x<span style="color:cyan">,</span> y<span style="color:cyan">,</span> z<span style="color:cyan">,</span> w<span style="color:cyan">,</span> m<span style="color:cyan">,</span> n<span style="color:cyan">,</span> o<span style="color:cyan">,</span> p<span style="color:cyan">,</span> q<span style="color:cyan">,</span> r<span style="color:cyan">,</span> s<span style="color:cyan">,</span> t
 
 
 # Punctuation test
-print("Done.", end=", see you soon:")
+print("Done<span style="color:cyan">.</span>"<span style="color:cyan">,</span> end="<span style="color:cyan">,</span> see you soon<span style="color:cyan">:</span>")
 </pre></body></html>
