@@ -1,0 +1,76 @@
+<html><body><pre style="font-family: monospace">
+<span style="color:#DDA0DD"># This is <span style="color:red">a</span> single<span style="color:red">-</span>line comment</span>
+
+import math
+from random import randint 
+
+<span style="color:red">dic</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#87CEFA">{</span></span>
+
+<span style="color:<span style="color:#DDA0DD">#87CEFA">}</span></span>
+
+<span style="color:red">lol</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#87CEFA">[</span></span>
+
+]
+
+<span style="color:#DDA0DD"># Keywords and identifiers</span>
+
+def <span style="color:magenta">function_name</span><span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:red">param1</span>, <span style="color:red">param2</span><span style="color:red">=</span><span style="color:#a5ff90">123</span><span style="color:#87CEFA">)</span>:</span>
+    <span style="color:red">my_variable</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">"hello"</span></span>
+    <span style="color:red">_privateVar</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">f"formatted <span style="color:#87CEFA">{</span><span style="color:red">param1</span><span style="color:#87CEFA">}</span>"</span></span>
+    <span style="color:red">another_var</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">45.67</span></span>
+    <span style="color:red">complex_num</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">5j</span></span>
+    <span style="color:red">flag</span> <span style="color:red">=</span> True
+    <span style="color:red">nothing</span> <span style="color:red">=</span> None
+    if <span style="color:red">my_variable</span> and <span style="color:red">another_var</span> <span style="color:red">&gt;</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">10</span>:</span>
+        <span style="color:red">result</span> <span style="color:red">=</span> <span style="color:red">param1</span> <span style="color:red">+</span> <span style="color:red">param2</span>
+        print<span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:#a5ff90">"Result:"</span>, <span style="color:red">result</span><span style="color:#87CEFA">)</span></span>
+    elif <span style="color:red">param2</span> <span style="color:red">&lt;</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">100</span>:</span>
+        while <span style="color:red">param2</span> <span style="color:red">!=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">0</span>:</span>
+            <span style="color:red">param2</span> <span style="color:red">-=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">1</span></span>
+            continue
+    else:
+        pass
+
+    try:
+        raise ValueError<span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:#a5ff90">"Just <span style="color:red">a</span> test"</span><span style="color:#87CEFA">)</span></span>
+    except Exception as e:
+        print<span style="color:<span style="color:#DDA0DD">#87CEFA">(</span>e<span style="color:#87CEFA">)</span></span>
+    finally:
+        return <span style="color:red">result</span>
+
+
+class <span style="color:#FF4500">ClassName</span>:
+    def <span style="color:magenta">__init__</span><span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:red">self</span>, <span style="color:red">value</span><span style="color:#87CEFA">)</span>:</span>
+        <span style="color:red">self</span>.<span style="color:red">value</span> <span style="color:red">=</span> <span style="color:red">value</span>
+
+    def <span style="color:magenta">compute</span><span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:red">self</span><span style="color:#87CEFA">)</span>:</span>
+        for <span style="color:red">i</span> in range<span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:#a5ff90">5</span><span style="color:#87CEFA">)</span>:</span>
+            <span style="color:red">self</span>.<span style="color:red">value</span> <span style="color:red">**=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">2</span></span>
+            if <span style="color:red">self</span>.<span style="color:red">value</span> in <span style="color:<span style="color:#DDA0DD">#87CEFA">[</span><span style="color:#a5ff90">1</span>, <span style="color:#a5ff90">4</span>, <span style="color:#a5ff90">16</span>]:</span>
+                break
+            elif <span style="color:red">self</span>.<span style="color:red">value</span> not in <span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:#a5ff90">0</span>, <span style="color:#a5ff90">2</span>, <span style="color:#a5ff90">3</span><span style="color:#87CEFA">)</span>:</span>
+                <span style="color:red">self</span>.<span style="color:red">value</span> <span style="color:red">//</span><span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">2</span></span>
+
+    def <span style="color:magenta">__str__</span><span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:red">self</span><span style="color:#87CEFA">)</span>:</span>
+        return <span style="color:<span style="color:#DDA0DD">#a5ff90">f"Value is <span style="color:#87CEFA">{</span><span style="color:red">self</span>.<span style="color:red">value</span><span style="color:#87CEFA">}</span>"</span></span>
+
+
+def <span style="color:magenta">logic_operations</span><span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:red">a</span>, <span style="color:red">b</span><span style="color:#87CEFA">)</span>:</span>
+    <span style="color:red">x</span> <span style="color:red">=</span> <span style="color:red">a</span> and <span style="color:red">b</span> or not <span style="color:red">a</span>
+    <span style="color:red">y</span> <span style="color:red">=</span> <span style="color:red">a</span> <span style="color:red">==</span> <span style="color:red">b</span>
+    <span style="color:red">z</span> <span style="color:red">=</span> <span style="color:red">a</span> is <span style="color:red">b</span>
+    <span style="color:red">w</span> <span style="color:red">=</span> <span style="color:red">a</span> is not <span style="color:red">b</span>
+    <span style="color:red">m</span> <span style="color:red">=</span> <span style="color:red">a</span> <span style="color:red">&amp;</span> <span style="color:red">b</span>
+    <span style="color:red">n</span> <span style="color:red">=</span> <span style="color:red">a</span> <span style="color:red">|</span> <span style="color:red">b</span>
+    <span style="color:red">o</span> <span style="color:red">=</span> <span style="color:red">~</span><span style="color:red">a</span>
+    <span style="color:red">p</span> <span style="color:red">=</span> <span style="color:red">a</span> <span style="color:red">^</span> <span style="color:red">b</span>
+    <span style="color:red">q</span> <span style="color:red">=</span> <span style="color:red">a</span> <span style="color:red">&lt;&lt;</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">2</span></span>
+    <span style="color:red">r</span> <span style="color:red">=</span> <span style="color:red">b</span> <span style="color:red">&gt;&gt;</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">1</span></span>
+    <span style="color:red">s</span> <span style="color:red">=</span> <span style="color:<span style="color:#DDA0DD">#a5ff90">1</span> <span style="color:red">&lt;=</span> <span style="color:red">a</span> <span style="color:red">&lt;=</span> <span style="color:#a5ff90">100</span></span>
+    <span style="color:red">t</span> <span style="color:red">=</span> <span style="color:red">a</span> <span style="color:red">&gt;=</span> <span style="color:red">b</span>
+    return <span style="color:red">x</span>, <span style="color:red">y</span>, <span style="color:red">z</span>, <span style="color:red">w</span>, <span style="color:red">m</span>, <span style="color:red">n</span>, <span style="color:red">o</span>, <span style="color:red">p</span>, <span style="color:red">q</span>, <span style="color:red">r</span>, <span style="color:red">s</span>, <span style="color:red">t</span>
+
+
+<span style="color:#DDA0DD"># Punctuation test</span>
+print<span style="color:<span style="color:#DDA0DD">#87CEFA">(</span><span style="color:#a5ff90">"Done."</span>, end<span style="color:red">=</span><span style="color:#a5ff90">", see you soon:"</span><span style="color:#87CEFA">)</span></span>
+</pre></body></html>
