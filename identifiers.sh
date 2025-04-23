@@ -5,10 +5,23 @@ output="output.html"
 
 echo "<html><body><pre>" > "$output"
 
+#pattern to identify variables and functions
+# [a-zA-Z_] - check if it starts with letter (lowercase or capital) or underscore
+# [a-zA-Z0-9_]* - check if it is followed by any combination of letters, numbers or underscores
+# (=|\(|\s) - check if it is followed by equals, parenthesis, or whitespace
+
+variable_pattern='([a-zA-Z_][a-zA-Z0-9_]*)[[:space:]]*='
+function_pattern='(def[[:space:]]+)([a-zA-Z_][a-zA-Z0-9_]*)[[:space:]]*\('
+
 while IFS= read -r line; do
     #identifiers
-    highlighted=$(echo "$line" | sed -E 's/\b(function_name|param1|param2|my_variable|_privateVar|another_var|complex_num|flag|nothing|result|e|ClassName|self|value|compute|i|__str__|logic_operations|a|b|x|y|z|w|m|n|o|p|q|r|s|t)\b/<span style="color:red">\1<\/span>/g')
-    # __init__ is a keyword
+
+    #functions first, prevents double highlighting
+    #highlighted=$(echo "$line" | sed -E 's/'"$function_pattern"'\1/<span style="color:red">\2<\/span>(/g')
+    highlighted=$(echo "$line" | sed -E 's/(def[[:space:]]+)([a-zA-Z_][a-zA-Z0-9_]*)/\1<span style="color:red">\2<\/span>/g')
+
+    #variables
+    highlighted=$(echo "$highlighted" | sed -E 's/'"$variable_pattern"'/<span style="color:red">\1<\/span>=/g')
 
     echo "$highlighted" >> "$output"
 done < "$input"
@@ -28,3 +41,9 @@ echo "</pre></body></html>" >> "$output"
 # g -> global (replace all occurrences in the line)
 # echo "$highlighted" >> "$output" -> appends the modified line to output.html
 # '</pre></body></html>' are closing tags
+
+#   =       # Literal equal sign
+#   |       # OR
+#   \(      # Literal opening parenthesis (escaped with backslash)
+#   |       # OR
+#   \s      # Any whitespace character (space, tab, newline)
