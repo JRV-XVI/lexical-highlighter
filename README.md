@@ -31,13 +31,10 @@ El programa identifica y resalta las siguientes categorías léxicas del lenguaj
 - **Membership**: `in`, `not in`.
 - **Identity**: `is`, `is not`.
 
-### 5. **Delimitadores**
-- Ejemplos: `()`, `[]`, `{}`.
-
-### 6. **Comentarios**
+### 5. **Comentarios**
 - Ejemplo: `# This is a single-line comment`.
 
-### 7. **Puntuación**
+### 6. **Puntuación**
 - Ejemplos: `.`, `,`, `:`.
 
 ---
