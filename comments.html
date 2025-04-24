@@ -1,45 +1,33 @@
 <html><body><pre>
 <span style="color:green"># This is a single-line comment</span>
 
-"""This is a multi-line comment <span style="color:blue">(</span>docstring<span style="color:blue">)</span>
-Demonstrating all lexical categories in Python.
-<span style="color:green">"""
 
 import math
 from random import randint 
 
-"""</span>
-This is a comment
-"""
 
-dic = <span style="color:blue">{</span>
+dic = {
 
-<span style="color:blue">}</span>
+}
 
-<span style=color:green>'''This is a comment
-'''</span>
 
-lol = <span style="color:blue">[</span>
+lol = [
 
 ]
 
-<span style=color:green>'''
-This is a comment
-'''</span>
 
-<span style=color:green>'''This is another comment'''</span>
-<span style="color:green"># Keywords and identifiers</span>
+hola = 123 <span style="color:green"># Keywords and identifiers</span>
 
-def function_name<span style="color:blue">(</span>param1, param2=123<span style="color:blue">)</span>:
+def function_name(param1, param2=123):
     my_variable = "hello"
-    _privateVar = f"formatted <span style="color:blue">{</span>param1<span style="color:blue">}</span>"
+    _privateVar = f"formatted {param1}"
     another_var = 45.67
     complex_num = 5j
     flag = True
     nothing = None
     if my_variable and another_var > 10:
         result = param1 + param2
-        print<span style="color:blue">(</span>"Result:", result<span style="color:blue">)</span>
+        print("Result:", result)
     elif param2 < 100:
         while param2 != 0:
             param2 -= 1
@@ -48,30 +36,30 @@ def function_name<span style="color:blue">(</span>param1, param2=123<span style=
         pass
 
     try:
-        raise ValueError<span style="color:blue">(</span>"Just a test"<span style="color:blue">)</span>
+        raise ValueError("Just a test")
     except Exception as e:
-        print<span style="color:blue">(</span>e<span style="color:blue">)</span>
+        print(e)
     finally:
         return result
 
 
 class ClassName:
-    def __init__<span style="color:blue">(</span>self, value<span style="color:blue">)</span>:
+    def __init__(self, value):
         self.value = value
 
-    def compute<span style="color:blue">(</span>self<span style="color:blue">)</span>:
-        for i in range<span style="color:blue">(</span>5<span style="color:blue">)</span>:
+    def compute(self):
+        for i in range(5):
             self.value **= 2
-            if self.value in <span style="color:blue">[</span>1, 4, 16]:
+            if self.value in [1, 4, 16]:
                 break
-            elif self.value not in <span style="color:blue">(</span>0, 2, 3<span style="color:blue">)</span>:
+            elif self.value not in (0, 2, 3):
                 self.value //= 2
 
-    def __str__<span style="color:blue">(</span>self<span style="color:blue">)</span>:
-        return f"Value is <span style="color:blue">{</span>self.value<span style="color:blue">}</span>"
+    def __str__(self):
+        return f"Value is {self.value}"
 
 
-def logic_operations<span style="color:blue">(</span>a, b<span style="color:blue">)</span>:
+def logic_operations(a, b):
     x = a and b or not a
     y = a == b
     z = a is b
@@ -88,5 +76,5 @@ def logic_operations<span style="color:blue">(</span>a, b<span style="color:blue
 
 
 <span style="color:green"># Punctuation test</span>
-print<span style="color:blue">(</span>"Done.", end=", see you soon:"<span style="color:blue">)</span>
+print("Done.", end=", see you soon:")
 </pre></body></html>
